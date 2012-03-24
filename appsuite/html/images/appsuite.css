@@ -1,0 +1,12 @@
+
+* {margin : 0px; padding: 0px;}
+body { margin : 0px; background: #8bbeff; font-size:12px;}
+a {color:#097bf0; text-decoration:none;}
+a:hover { color:#f98821; text-decoration:underline;}
+
+.qn_all { margin : 0px; border:#000000 0px solid;}
+.qn_head { height: 33px; background: #0078ae url(/images/ui-bg_glass_45_0078ae_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #b1c0c2; outline: none; padding:0px}
+.qn_head .logo_div {padding: 0px; margin: 0px; height: 33px; width:142px; float:left;}
+.qn_head .content_div{float: right; padding:0px; margin: 0 5px 0 0; width:auto; height:33px; text-align: right;}
+
+.qn_left_top_status {width: 288px; width: 203; background: #8bbeff url(/left-top-status.png) 50% 50% repeat-x;}

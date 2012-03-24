@@ -1,0 +1,74 @@
+* {margin : 0px; padding: 0px;}
+body { margin : 0px; background: #8bbeff; font-size:12px;}
+a {color:#097bf0; text-decoration:none;}
+a:hover { color:#f98821; text-decoration:underline;}
+
+.qn_all { margin : 0px; border:#000000 0px solid;}
+.qn_head { height: 33px; background: #0078ae url(/images/ui-bg_glass_45_0078ae_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #b1c0c2; outline: none; padding:0px}
+.qn_head .logo_div {padding: 0px; margin: 0px; height: 33px; width:142px; float:left;}
+.qn_head .content_div{float: right; padding:0px; margin: 0 5px 0 0; width:auto; height:33px; text-align: right;}
+.qn_left {width: 291px; float: left; overflow: hidden;}
+.qn_left_small {width: 20px; float: left; overflow: hidden; display: none;}
+.qn_left_top_status {width: 285px; height: 203px; background: #8bbeff url(left_top_status.png); margin: 2px 3px;}
+.left_middle_tools {width: 285px; height: 336px; background: #8bbeff url(left_middle_tools.png); margin: 2px 3px;}
+
+
+.qn_icon { width: 285px; height: 24px; background-image: url(button2.png); }
+.qn_left_bottom .qn_icon {background-image: url(button2.png); margin: 2px 3px;}
+.qn_left_bottom_hover { background-position: 0 0; margin: 2px 3px; cursor: hand;}
+.qn_left_bottom_default{ background-position: 0 24px; margin: 2px 3px; cursor: hand;}
+.qn_left_bottom_img_1{width: 16px; height: 17px;background-image: url(telephone_go.png); float:left; margin: 3px 15px 0 3px;}
+.qn_left_bottom_img_2{width: 16px; height: 17px;background-image: url(icon_email.gif); float:left; margin: 3px 15px 0 3px;}
+.qn_left_bottom_img_3{width: 16px; height: 17px;background-image: url(icon_calendar.gif); float:left; margin: 3px 15px 0 3px;}
+
+
+.qn_maindiv {width: 285px; height: 24px; border:#000000 0px solid; margin: 2px; float: left; overflow:auto;}
+
+/* status */
+.qn_use_state{ height:21px; clear: both; padding: 3px 5px; border:#000000 0px solid;}
+.qn_use_state_button_off{ height:16px; width: 16px; float: right; background-image: url(resultset_previous.png); cursor: hand;}
+.qn_use_state_button_on{ height:16px; width: 16px; float: right; background-image: url(resultset_next.png); cursor: hand; margin: 3px auto auto auto}
+
+#status_img {width: 68px; height: 68px; margin-top:4px; margin-left:7px; }
+.qn_status_agentbusy {width: 68px; height: 68px; background-image: url(status.png); background-position: 0 0; margin-top:4px; margin-left:7px; }
+.qn_status_agentnotready {width: 68px; height: 68px; background-image: url(status.png); background-position: -72px 0; margin-top:4px; margin-left:7px;}
+.qn_status_agentworkingaftercall {width: 68px; height: 68px; background-image: url(status.png); background-position: -144px 0; margin-top:4px; margin-left:7px;}
+.qn_status_agentnull {width: 68px; height: 68px; background-image: url(status.png); background-position: -216px 0; margin-top:4px; margin-left:7px;}
+.qn_status_agentready {width: 68px; height: 68px; background-image: url(status.png); background-position: -288px 0; margin-top:4px; margin-left:7px;}
+
+.qn_status_dec {border:#000000 0px solid; margin:4px auto auto 14px !important; margin:4px auto auto 7px; float:left; font-family: times;}
+
+.qn_button_1 {width: 80px; height: 30px; border: 0px; background-image: url(button1.png); padding-top: 1px;}
+
+.messagepanel {height:78px; clear: both; color:#ffffff; padding: 6px; font-size: 14px;}
+
+/*工具*/
+#sortable { list-style-type: none; margin: 0; padding: 0; }
+#sortable li { margin: 3px 3px 3px 3px; padding: 1px; float: left; width: 77px; height: 85px; font-size: 4em; text-align: right; }
+.tools_hold{background: url(tools_hold.png) no-repeat; border:#cccccc 1px solid; cursor: hand;}
+.tools_back{background: url(tool_back.png) no-repeat; border:#cccccc 1px solid; cursor: hand;}
+.tool_consult{background: url(tool_consult.png) no-repeat; border:#cccccc 1px solid; cursor: hand;}
+.tool_transfer{background: url(tool_transfer.png) no-repeat; border:#cccccc 1px solid; cursor: hand;}
+.tools_Conference{background: url(tools_Conference.png) no-repeat; border:#cccccc 1px solid; cursor: hand;}
+.tool_addressbook{background: url(tool_addressbook.png) no-repeat; border:#cccccc 1px solid; cursor: hand;}
+
+/*软电话键盘*/
+.softphonevalue {margin-top: 100px; width: 300px; height:30px; border:#9b9b9b 2px solid; font-size: 20px;}
+#softphonekey { list-style-type: none; margin: 13px; padding: 0; width: 370px; height:294px; }
+.softphone {text-align:center; }
+#softphonekey li { margin: 1px; padding: 0px; float: left; width: 120px; height: 48px; text-align: right; }
+.key_1 {background: url(softphonekey.png)  no-repeat; background-position: 0 -48px; cursor: hand;}
+.key_2 {background: url(softphonekey.png)  no-repeat; background-position: 0 -96px; cursor: hand;}
+.key_3 {background: url(softphonekey.png)  no-repeat; background-position: 0 -144px; cursor: hand;}
+.key_4 {background: url(softphonekey.png)  no-repeat; background-position: 0 -192px; cursor: hand;}
+.key_5 {background: url(softphonekey.png)  no-repeat; background-position: 0 -240px; cursor: hand;}
+.key_6 {background: url(softphonekey.png)  no-repeat; background-position: 0 -288px; cursor: hand;}
+.key_7 {background: url(softphonekey.png)  no-repeat; background-position: 0 -336px; cursor: hand;}
+.key_8 {background: url(softphonekey.png)  no-repeat; background-position: 0 -384px; cursor: hand;}
+.key_9 {background: url(softphonekey.png)  no-repeat; background-position: 0 -432px; cursor: hand;}
+.key_xing {background: url(softphonekey.png)  no-repeat; background-position: 0 -480px; cursor: hand;}
+.key_0 {background: url(softphonekey.png)  no-repeat; background-position: 0 0; cursor: hand;}
+.key_jing {background: url(softphonekey.png)  no-repeat; background-position: 0 -528px; cursor: hand;}
+.key_save {background: url(softphonekey.png)  no-repeat; background-position: 0 -576px; cursor: hand;}
+.key_call {background: url(softphonekey.png)  no-repeat; background-position: 0 -624px; cursor: hand;}
+.key_refresh {background: url(softphonekey.png)  no-repeat; background-position: 0 -672px; cursor: hand;}

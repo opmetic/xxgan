@@ -1,0 +1,23 @@
+body {
+	margin : 0px;
+	background: url("sss/1.gif") no-repeat ;
+}
+
+.qn_all {
+	margin : 0px; border:#000000 0px solid;
+	
+}
+
+.qn_head {
+	height: 20px;
+	/*margin : 0px;
+	background: url("ui-bg_glass_45_0078ae_1x400.png") repeat;*/
+	border: 1px solid #666666; 
+	background: #555555 url(ui-bg_glass_20_555555_1x400.png) 50% 50% repeat-x; 
+	font-weight: normal; 
+	color: #ffffff; 
+	outline: none; 
+}
+
+/*×ó²à¿ì½Ý¼ü*/
+.qn_left_shortcut { width: 25px; height: 400px; padding: 0.5em; float: left; margin: 0; border:#FFFFFF 1px solid; }

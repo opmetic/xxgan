@@ -1,0 +1,11 @@
+* {margin : 0px; padding: 0px;}
+body { margin : 0px; background: #8bbeff; font-size:12px;}
+a {color:#097bf0; text-decoration:none;}
+a:hover { color:#f98821; text-decoration:underline;}
+
+input,textarea{
+			width:auto;
+			border:1px solid #ccc;
+			padding:2px;
+		}
+		

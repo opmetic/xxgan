@@ -1,0 +1,80 @@
+td {
+	font-size: 9pt;
+	text-decoration: none;
+}
+.input1 {
+	font-size: 9pt;
+	color: #333333;
+	background-color: #A9C7EF;
+	margin: 1px;
+	padding: 1px;
+	border: 1px solid #CCCCCC;
+	height: 14pt;
+}
+.input-search2 {
+
+	font-size: 9pt;
+	color: #666666;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	margin: 1px;
+	padding: 1px;
+	height:10pt;
+	border: 1px solid #EFB98D;
+}
+.fontlink {
+	font-size: 9pt;
+	color: #02244A;
+	text-decoration: none;
+}
+.fontlink2 {
+	font-size: 9pt;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.fontlink3 {
+	font-size: 9pt;
+	color: #003399;
+	text-decoration: none;
+}
+a:hover {
+	color: #000000;
+}
+
+ .top:link {
+  color: #FFFFFF;
+  TEXT-DECORATION: none;
+  font-size: 12px;
+ }
+ .top:visited {
+  COLOR: #FFFFFF;
+  TEXT-DECORATION: none;
+  font-size: 12px;
+ }
+ .top:hover {
+  COLOR: #FFFFFF;
+  font-size: 12px;
+  TEXT-DECORATION: none;
+ } 
+.titleColor{
+	font-size: 14pt;
+	font-weight: bold;
+	color: #005BB8;
+}
+
+font9 {
+	font-size: 9pt;
+	line-height: 23px;
+	text-decoration: none;
+}
+.font9pt {
+	font-size: 9pt;
+	line-height: 22px;
+	text-decoration: none;
+}
+.font9ptt {
+	font-size: 9pt;
+	line-height: 16px;
+	text-decoration: none;
+}

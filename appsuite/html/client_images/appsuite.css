@@ -1,0 +1,50 @@
+* {margin : 0px; padding: 0px;}
+body { margin : 0px; background: #8bbeff; font-size:12px;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+
+
+/*首部*/
+.region-north {height:93px;background:#B3DFDA; overflow:hidden; background: url(top.jpg) no-repeat;}
+.region-south {height:20px;background:#A9FACD;padding:0px;background: url(bg-0425.gif) repeat; color:#ffffff;font-size :12px; padding-top: 2px;}
+.region-south span{margin-right: 10px;}
+.region-south a{color:#ffffff; text-decoration:none;}
+.region-south a:hover{color:#ffffff; text-decoration:underline;}
+
+
+
+
+/*软电话*/
+/*软电话键盘*/
+.softphonevalue {margin-top: 5px; width: 160px; height:18px; border:#9b9b9b 1px solid;margin: 5px; font-size: 14px;}
+#softphonekey { list-style-type: none; margin: 0 5px; padding: 0; width: 200px; height:150px; }
+.softphone {text-align:center; }
+#softphonekey li { margin: 1px; padding: 0px; float: left; width: 64px; height: 32px; text-align: right; }
+.key_1 {background: url(softphonekey.png)  no-repeat; background-position: 0 -32px; cursor: hand;}
+.key_2 {background: url(softphonekey.png)  no-repeat; background-position: 0 -64px; cursor: hand;}
+.key_3 {background: url(softphonekey.png)  no-repeat; background-position: 0 -96px; cursor: hand;}
+.key_4 {background: url(softphonekey.png)  no-repeat; background-position: 0 -128px; cursor: hand;}
+.key_5 {background: url(softphonekey.png)  no-repeat; background-position: 0 -160px; cursor: hand;}
+.key_6 {background: url(softphonekey.png)  no-repeat; background-position: 0 -192px; cursor: hand;}
+.key_7 {background: url(softphonekey.png)  no-repeat; background-position: 0 -224px; cursor: hand;}
+.key_8 {background: url(softphonekey.png)  no-repeat; background-position: 0 -256px; cursor: hand;}
+.key_9 {background: url(softphonekey.png)  no-repeat; background-position: 0 -288px; cursor: hand;}
+.key_xing {background: url(softphonekey.png)  no-repeat; background-position: 0 -320px; cursor: hand;}
+.key_0 {background: url(softphonekey.png)  no-repeat; background-position: 0 0; cursor: hand;}
+.key_jing {background: url(softphonekey.png)  no-repeat; background-position: 0 -352px; cursor: hand;}
+.key_save {background: url(softphonekey.png)  no-repeat; background-position: 0 -384px; cursor: hand;}
+.key_call {background: url(softphonekey.png)  no-repeat; background-position: 0 -416px; cursor: hand;}
+.key_refresh {background: url(softphonekey.png)  no-repeat; background-position: 0 -448px; cursor: hand;}
+
+/*首页样式*/
+.index_info_div{margin-top:20px;}
+.index_info_div ul{border:#cccccc 1px dotted;padding:10px; margin:10px 0;}
+.index_info_div div{border:#cccccc 1px dotted;padding:10px; margin:10px 0;}
+
+.consultdialogvalue {margin-top: 20px; width: 160px; height:18px; border:#9b9b9b 1px solid;font-size: 14px;}
+#consultdialog { text-align: left; }
+#consultdialogflag_bt {margin-top: 20px;}
+
+#msg_calling{font-family: "Franklin Gothic Book","Lucida Grande",sans-serif;color:#FFD700;font-size :14px;font-weight:600;}
+#qn_do_txt{font-family: "Franklin Gothic Book","Lucida Grande",sans-serif;color:#FFD700;font-size :14px;font-weight:600;}

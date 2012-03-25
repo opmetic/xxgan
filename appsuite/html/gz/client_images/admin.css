@@ -1,0 +1,32 @@
+* {margin : 0px; padding: 0px;}
+body { margin : 0px; background: #8bbeff; font-size:12px;}
+a {text-decoration:none;}
+a:hover { text-decoration:underline;}
+
+input,textarea{
+			width:auto;
+			border:1px solid #ccc;
+			padding:2px;
+		}
+		
+
+table { 
+border:0px solid #A9B3CD; 
+border-collapse:collapse; 
+} 
+tr.def { 
+padding-top: 2px; 
+padding-bottom: 2px; 
+} 
+tr.def td{ 
+
+border: solid #A9B3CD; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */ 
+border-width: 1px 1px 1px 1px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */ 
+
+} 
+tr.def th{ 
+
+border: solid #A9B3CD; /* 设置边框属性；样式(solid=实线)、颜色(#999=灰) */ 
+border-width: 1px 1px 1px 1px; /* 设置边框状粗细：上 右 下 左 = 对应：1px 0 0 1px */ 
+
+} 

@@ -1,0 +1,94 @@
+* {margin : 0px; padding: 0px;}
+body { margin : 0px; background: #8bbeff; font-size:12px;}
+a {text-decoration:none;}
+a:hover {text-decoration:underline;}
+
+/* status status.png*/
+.qn_status_dec{border:#000000 0px solid; float:left;}
+.action_botton {text-align: center; clear: both; margin: 10px 0;}
+.action_botton a {color:#000000; text-decoration: none;}
+.action_botton a:hover { color:#000000; text-decoration: none;}
+
+.queue_count {height: 16px; width:16px; background: url(pagination_load.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+
+#status_img {border:#FFFFFF 0px solid; height:33px; width: 33px; float:left; margin: 5px 10px 0 0;}
+.qn_status_agentbusy {width: 33px; height: 33px; background-image: url(status.png); background-position: 0 0; }
+.qn_status_agentnotready {width: 33px; height: 33px; background-image: url(status.png); background-position: -33px 0; }
+.qn_status_agentworkingaftercall {width: 33px; height: 33px; background-image: url(status.png); background-position: -67px 0; }
+.qn_status_agentnull {width: 33px; height: 33px; background-image: url(status.png); background-position: -102px 0; }
+.qn_status_agentready {width: 33px; height: 33px; background-image: url(status.png); background-position: -137px 0; }
+
+
+/*首部*/
+.region-north {height:93px;background:#B3DFDA; overflow:hidden; background: url(top.jpg) no-repeat;}
+.region-south {height:20px;background:#A9FACD;padding:0px;background: url(bg-0425.gif) repeat; color:#ffffff;font-size :12px; padding-top: 2px;}
+.region-south span{margin-right: 10px;}
+.region-south a{color:#ffffff; text-decoration:none;}
+.region-south a:hover{color:#ffffff; text-decoration:underline;}
+
+
+/*CTI工具*/
+#ctitoolbar { list-style-type: none; margin: 0; padding: 0; }
+#ctitoolbar li { margin: 1px 0px 1px 1px; padding: 0px; float: left; width: 58px; height: 58px; text-align: right;  /*background: #8bbeff;*/ border:#000000 0px solid;}
+
+
+
+.cti_tool_hold{background: url(c_titool_hold.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+.cti_tool_conference{background: url(c_titool_conference.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+.cti_tool_transfer{background: url(c_titool_transfer.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+
+.cti_tool_consult{background: url(c_titool_consult.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+.cti_tool_addressbook{background: url(c_titool_addressbook.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+.cti_tool_back{background: url(c_titool_back.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+
+.cti_tool_monitor{background: url(c_titool_monitor.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+.cti_tool_in{background: url(c_titool_in.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+.cti_tool_out{background: url(c_titool_out.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+
+/*公共工具*/
+#commontoolbar { list-style-type: none; margin: 0; padding: 0; }
+#commontoolbar li { margin: 0 1px; padding: 0px; float: left; width: 32px; height: 32px; text-align: right;  /*background: #8bbeff; border:#000000 1px solid;*/}
+
+.com_tool_phone{background: url(c_phone_inc.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+.com_tool_msg{background: url(c_tool_msg.png) no-repeat; border:#cccccc 0px solid; cursor: hand;}
+
+
+/*软电话*/
+/*软电话键盘*/
+.softphonevalue {margin-top: 5px; width: 160px; height:18px; border:#9b9b9b 1px solid;margin: 5px; font-size: 14px;}
+#softphonekey { list-style-type: none; margin: 0 5px; padding: 0; width: 200px; height:150px; }
+.softphone {text-align:center; }
+#softphonekey li { margin: 1px; padding: 0px; float: left; width: 64px; height: 32px; text-align: right; }
+.key_1 {background: url(softphonekey.png)  no-repeat; background-position: 0 -32px; cursor: hand;}
+.key_2 {background: url(softphonekey.png)  no-repeat; background-position: 0 -64px; cursor: hand;}
+.key_3 {background: url(softphonekey.png)  no-repeat; background-position: 0 -96px; cursor: hand;}
+.key_4 {background: url(softphonekey.png)  no-repeat; background-position: 0 -128px; cursor: hand;}
+.key_5 {background: url(softphonekey.png)  no-repeat; background-position: 0 -160px; cursor: hand;}
+.key_6 {background: url(softphonekey.png)  no-repeat; background-position: 0 -192px; cursor: hand;}
+.key_7 {background: url(softphonekey.png)  no-repeat; background-position: 0 -224px; cursor: hand;}
+.key_8 {background: url(softphonekey.png)  no-repeat; background-position: 0 -256px; cursor: hand;}
+.key_9 {background: url(softphonekey.png)  no-repeat; background-position: 0 -288px; cursor: hand;}
+.key_xing {background: url(softphonekey.png)  no-repeat; background-position: 0 -320px; cursor: hand;}
+.key_0 {background: url(softphonekey.png)  no-repeat; background-position: 0 0; cursor: hand;}
+.key_jing {background: url(softphonekey.png)  no-repeat; background-position: 0 -352px; cursor: hand;}
+.key_save {background: url(softphonekey.png)  no-repeat; background-position: 0 -384px; cursor: hand;}
+.key_call {background: url(softphonekey.png)  no-repeat; background-position: 0 -416px; cursor: hand;}
+.key_refresh {background: url(softphonekey.png)  no-repeat; background-position: 0 -448px; cursor: hand;}
+
+/*首页样式*/
+.index_info_div{margin-top:20px;}
+.index_info_div ul{border:#cccccc 1px dotted;padding:10px; margin:10px 0;}
+.index_info_div div{border:#cccccc 1px dotted;padding:10px; margin:10px 0;}
+
+.consultdialogvalue {margin-top: 20px; width: 160px; height:18px; border:#9b9b9b 1px solid;font-size: 14px;}
+#consultdialog { text-align: left; }
+#consultdialogflag_bt {margin-top: 20px;}
+
+/* 做标志用 */
+.startservice_stype{background-color:#ffffcc;}
+.stopservice_stype{background-color:#99FFFF; }
+.msg_calling{}
+.msg_called{}
+.call_in_time{}
+.start_time{}
+.msg_timelong{}

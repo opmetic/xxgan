@@ -1,0 +1,66 @@
+body { margin : 0px; background: #4499ee; font-size:12px;}
+a {color:#097bf0; text-decoration:none;}
+a:hover { color:#f98821; text-decoration:underline;}
+
+.qn_all { margin : 0px; border:#000000 0px solid;}
+.qn_head { height: 33px; background: #0078ae url(/images/ui-bg_glass_45_0078ae_1x400.png) 50% 50% repeat-x; font-weight: normal; color: #b1c0c2; outline: none; padding:0px}
+.qn_head .logo_div {padding: 0px; margin: 0px; height: 33px; width:142px; float:left;}
+.qn_head .content_div{float: right; padding:0px; margin: 0 5px 0 0; width:auto; height:33px; text-align: right;}
+/*左侧快捷键*/
+.qn_left_shortcut { width: 32px; height: auto; float: left; margin: 0 0 0 1px; border:#AAEEFF 1px solid; background : #8ec2f5; padding: 2px 0 0 0 ;}
+
+ul#icons {margin: 0; padding: 0;}
+ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+ul#icons span.ui-icon {float: left; margin: 0 4px;}
+
+/*右侧目录*/
+.qn_right_menu { width: auto; height: auto; float: right; margin: 15px 0 0 0;}
+
+/*右侧目录　子目录*/
+.column { width: 170px; float: left; padding-bottom: 10px; }
+.portlet { margin: 0 1em 2px 0;}
+.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; cursor: default; }
+.portlet-header .ui-icon { float: right; }
+.portlet-content { padding: 0.4em;}
+.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+.ui-sortable-placeholder * { visibility: hidden; }
+
+.qn_menu_more_box {width:200px; height:auto;position: absolute; display:none; top:0px; right: 0px; padding:0px; margin: 0px;}
+.qn_menu_more_head { width:198px; height:auto;  background-color: #8ec2f5 ; border:#d6e9fc 1px solid; display:none; padding:0px; margin: 0px;}
+.qn_menu_more_headex{height:auto; background: #049ff1 url(/images/ui-bg_gloss-wave_75_2191c0_500x100.png) 50% 50% repeat-x; border:#d6e9fc 0px solid; display:none;padding:0px; margin: 0px;}
+.qn_menu_more_body { width:198px; border:#d6e9fc 0px solid; background-color:#8ec2f5; display:none; padding:0px; margin: 0px;}
+
+/*msg*/
+.qn_column { width: 170px; float: left; padding-bottom: 10px; }
+.qn_portlet { margin: 0 1em 2px 0;}
+.qn_portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+.qn_portlet-header .ui-icon { float: right; }
+.qn_portlet-content { padding: 0.4em; }
+.qn_ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+.qn_ui-sortable-placeholder * { visibility: hidden; }
+
+/*qn windows*/
+.qn_column-window { width: 200px; float: left; padding-bottom: 10px; display:none;position: absolute; z-index:9999; }
+.qn_portlet-window { margin: 0 2px 2px 0;}
+.qn_portlet-header-window { margin: 0.3em 2px; padding-bottom: 4px; padding-left: 0.2em; display:none;}
+.qn_portlet-header-window .ui-icon { float: right; }
+.qn_portlet-content-window { padding: 0.4em;  display:none;}
+.qn_ui-sortable-placeholder-window { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+.qn_ui-sortable-placeholder-window * { visibility: hidden; }
+
+/*qn frame*/
+.qn_column-frame { width: 200px; float: left; padding-bottom: 0px; display:none; position: absolute; }
+.qn_portlet-frame { margin: 0 2px 0px 0;}
+.qn_portlet-header-frame { margin: 2px; padding-bottom: 4px; padding-left: 0.2em; display:none;}
+.qn_portlet-header-frame .ui-icon { float: right; }
+.qn_portlet-content-frame { padding: 0px; }
+.qn_ui-sortable-placeholder-frame { border: 1px solid #4499ee; visibility: visible !important; overflow: auto; background-color:#ffffff;}
+
+/*
+.qn_column-frame { width: 200px; float: left; padding-bottom: 0px; display:none; position: absolute; }
+.qn_portlet-frame { margin: 0 2px 0px 0;}
+.qn_portlet-header-frame { margin: 2px; padding-bottom: 4px; padding-left: 0.2em; display:none;}
+.qn_portlet-header-frame .ui-icon { float: right; }
+.qn_portlet-content-frame { padding: 0px; }
+.qn_ui-sortable-placeholder-frame { border: 1px solid #4499ee; visibility: visible !important; overflow: scroll; background-color:#ffffff;}
+*/

@@ -518,8 +518,8 @@ class QnuserrenterController extends Zend_Controller_Action_Qn
 		$db = Zend_Registry::get('dbAdapter');
 
 		$up_ary = array(
-						'pwdplaintext' => "000000",
-						'password' => strtoupper(md5("000000")),
+						'pwdplaintext' => "abc123",
+						'password' => strtoupper(md5("abc123")),
 					);
 
 
@@ -556,13 +556,29 @@ class QnuserrenterController extends Zend_Controller_Action_Qn
         $id =  $this->_getParam('id');
         $db = Zend_Registry::get('dbAdapter');
 
+		
         $up_ary = array(
+        				'pwdplaintext' => "abc123",
+						'password' => strtoupper(md5("abc123")),
                         'uflag' => 0
                     );
-
-
         $where = $db->quoteInto('uid = ?', $id);
         $db->update($config['factory_enterprisecode'] . '_' . TABLE_QNSOFT_USER, $up_ary, $where);
+        
+        $select = $db->select();
+        $select->from($config['factory_enterprisecode'] . '_' . TABLE_QNSOFT_USER, '*');
+        $select->where('uid = ?', $id);
+        $select->where('deleteflag = 0'); //未删除
+
+        $userData = $db->fetchRow($select);
+        //更新密码管理信息表
+    	$up_ary = array(
+			'pm_status' => 1, //锁定坐席	
+			pm_errorpwdcount => 0	
+    	);
+		$where = $db->quoteInto('pm_workid = ?', $userData['workid']);
+		$db->update('qnsoft_pwdmanage', $up_ary, $where);
+        
         header('location: ' . $config['site_url'] . '/qnuserrenter/list');
     }
     

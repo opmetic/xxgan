@@ -256,9 +256,10 @@ function setAgentAutoEnterIdle()
 
 <body class="easyui-layout">
 
-<OBJECT height=0 width=0 ID="csAgentClient" CLASSID="CLSID:167CE366-D521-4457-9216-6AE78AB6DF1B" codebase="{$system_config.site_url}/instal/cabAppSuite.cab#version=1,0,0,8"></OBJECT>          
-
+          
+<OBJECT height=0 width=0 ID="csAgentClient" CLASSID="CLSID:167CE366-D521-4457-9216-6AE78AB6DF1B" codebase="{$system_config.site_url}/instal/cabAppSuite.cab#version=1,0,0,8"></OBJECT>
 <!-- 
+<OBJECT height=0 width=0 ID="csAgentClient" CLASSID="CLSID:167CE366-D521-4457-9216-6AE78AB6DF1B" codebase="{$system_config.site_url}/instal/cabAppSuite.cab#version=1,0,0,8"></OBJECT>
 <OBJECT ID="csAgentClient" CLASSID="CLSID:167CE366-D521-4457-9216-6AE78AB6DF1B" VIEWASTEXT height=0 width=0></OBJECT>
 <OBJECT ID="csAgentClient" CLASSID="" VIEWASTEXT height=0 width=0></OBJECT>
 -->

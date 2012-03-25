@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2011-07-13 00:22:44
+<?php /* Smarty version 2.6.20, created on 2012-03-26 00:51:45
          compiled from renter/setagent.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,6 +14,57 @@
 <?php echo '
 <script type="text/javascript">
 $(function(){
+	//验证密码
+	$("#setpwd").submit( function () { 
+		oldpasspwrod = $("#password").val();
+		newpasspwrod = $("#newpassword").val();
+		newpasspwrod2 = $("#newpassword2").val();
+
+		if (oldpasspwrod == "")
+		{
+			return true;
+		}
+		
+		if (newpasspwrod != newpasspwrod2)
+		{
+			alert("错误:两次输入密码不一致!");
+			return false;
+		}
+
+		if (newpasspwrod == oldpasspwrod)
+		{
+			alert("错误:输入的新密码和原密码一致!");
+			return false;
+		}
+
+		if (newpasspwrod.length < 6 || newpasspwrod.length > 8)
+		{
+			alert("错误:新密码长度不符合要求! 要求长度6位-8位");
+			return false;
+		}
+
+		var jgpattern =/^[A-Za-z0-9]+$/; //只能是字母和数字
+		if (!jgpattern.test(newpasspwrod))
+		{
+			alert("错误:新密码格式不符合要求! 要求由 字母 和 数字 组成");
+			return false;
+		}
+		var jgpattern2 = /^.*[A-Za-z]+.*$/; //必须有一个字母
+		if (!jgpattern2.test(newpasspwrod))
+		{
+			alert("错误:新密码格式不符合要求! 要求至少含有一个字母");
+			return false;
+		}
+
+		var jgpattern3 = /^.*[0-9]+.*$/; //必须有一个数字
+		if (!jgpattern3.test(newpasspwrod))
+		{
+			alert("错误:新密码格式不符合要求! 要求至少含有一个数字");
+			return false;
+		}
+		
+        return true;
+    });
 });
 </script>
 '; ?>
@@ -21,7 +72,7 @@ $(function(){
 </head>
 
 <body>
-<form method="post" action="<?php echo $this->_tpl_vars['system_config']['site_url']; ?>
+<form id="setpwd" method="post" action="<?php echo $this->_tpl_vars['system_config']['site_url']; ?>
 /qnuserrenter/setagent">
 	<p style="color:#FF0000;"><?php echo $this->_tpl_vars['msg']; ?>
 </p>

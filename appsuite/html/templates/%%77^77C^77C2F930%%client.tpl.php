@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2011-11-29 15:36:12
+<?php /* Smarty version 2.6.20, created on 2012-03-26 00:49:51
          compiled from gz/client.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -311,10 +311,12 @@ function setAgentAutoEnterIdle()
 
 <body class="easyui-layout">
 
+          
 <OBJECT height=0 width=0 ID="csAgentClient" CLASSID="CLSID:167CE366-D521-4457-9216-6AE78AB6DF1B" codebase="<?php echo $this->_tpl_vars['system_config']['site_url']; ?>
-/instal/cabAppSuite.cab#version=1,0,0,8"></OBJECT>          
-
+/instal/cabAppSuite.cab#version=1,0,0,8"></OBJECT>
 <!-- 
+<OBJECT height=0 width=0 ID="csAgentClient" CLASSID="CLSID:167CE366-D521-4457-9216-6AE78AB6DF1B" codebase="<?php echo $this->_tpl_vars['system_config']['site_url']; ?>
+/instal/cabAppSuite.cab#version=1,0,0,8"></OBJECT>
 <OBJECT ID="csAgentClient" CLASSID="CLSID:167CE366-D521-4457-9216-6AE78AB6DF1B" VIEWASTEXT height=0 width=0></OBJECT>
 <OBJECT ID="csAgentClient" CLASSID="" VIEWASTEXT height=0 width=0></OBJECT>
 -->

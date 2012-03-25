@@ -8,6 +8,12 @@
 <script type="text/javascript" src="{$system_config.img_url}/script/jquery-1.3.2.min.js"></script>
 <script type="text/javascript" src="{$system_config.img_url}/script/jquery-ui-1.7.2.custom.min.js"></script>
 
+<!-- easyui -->
+<link rel="stylesheet" type="text/css" href="{$system_config.img_url}/client_images/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="{$system_config.img_url}/client_images/themes/icon.css">
+<script type="text/javascript" src="{$system_config.img_url}/client_script/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="{$system_config.img_url}/client_script/easyloader.js"></script>
+
 {literal}
 <style type="text/css">
 body { margin : 0px; background: #ffffff; font-size:12px; text-align:center;}/*4499ee*/
@@ -32,6 +38,36 @@ background-image: url({/literal}{$system_config.img_url}{literal}/images/loginbo
 background-image: url({/literal}{$system_config.img_url}{literal}/images/loginboard.gif); background-position: -205px -170px;
 }
 .alert {margin: 0 0 0 130px; color: #ff3300;}
+
+.form-table {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.form-table th {
+font-size:15px;
+text-align: left;
+padding: 16px 10px 10px;
+/*border-bottom:8px solid #ffffff;*/
+width:100px;
+color: #0099CC;
+}
+
+.form-table td {
+font-size:12px;
+text-align: left;
+padding: 10px;
+/*border-bottom:8px solid #ffffff;*/
+margin-bottom: 9px;
+color: #808080;
+}
+
+.form-table input {
+line-height: 20px;
+font-size: 15px;
+padding: 2px;
+}
+
 </style>
 
 <script type="text/javascript">
@@ -39,6 +75,94 @@ $(function() {
     $("#username").focus();
 	clientHeight = $(window).height();
 	$(".login").height(clientHeight - 33 - 120);
+
+	$("#loginform").submit(function(){
+		if ($(".username").val() == "" ||$(".userpwd").val() == "")
+		{
+			alert("用户名 或 密码 不能为空！");
+			return false;
+		} 
+		return true;
+	});
+	
+	$('#lockscreem_window').window({
+		collapsible: false,
+		minimizable: false,
+		maximizable: false,
+		closable: true,
+		modal: true,
+		shadow: false,
+		closed: true
+		});
+
+	{/literal}{if $setpwd}
+	alert("{$setpwd}");
+	{literal}
+	$('#lockscreem_window').window({
+		collapsible: false,
+		minimizable: false,
+		maximizable: false,
+		closable: true,
+		modal: true,
+		shadow: false,
+		closed: false
+	});
+	{/literal}{/if}{literal}
+	
+
+	$(".form-table tr").mouseover(function(){
+        $(this).css("background-color" , "#e0e0e0");    
+    });
+	$(".form-table tr").mouseout(function(){
+		$(this).css("background-color" , "#ffffff");    
+    });	
+
+	//验证密码
+	$("#setpwd").submit( function () { 
+		oldpasspwrod = $("#oldpasspwrod").val();
+		newpasspwrod = $("#newpasspwrod").val();
+		newpasspwrod2 = $("#newpasspwrod2").val();
+
+		if (newpasspwrod != newpasspwrod2)
+		{
+			alert("错误:两次输入密码不一致!");
+			return false;
+		}
+
+		if (newpasspwrod == oldpasspwrod)
+		{
+			alert("错误:输入的新密码和原密码一致!");
+			return false;
+		}
+
+		if (newpasspwrod.length < 6 || newpasspwrod.length > 8)
+		{
+			alert("错误:新密码长度不符合要求! 要求长度6位-8位");
+			return false;
+		}
+
+		var jgpattern =/^[A-Za-z0-9]+$/; //只能是字母和数字
+		if (!jgpattern.test(newpasspwrod))
+		{
+			alert("错误:新密码格式不符合要求! 要求由 字母 和 数字 组成");
+			return false;
+		}
+		var jgpattern2 = /^.*[A-Za-z]+.*$/; //必须有一个字母
+		if (!jgpattern2.test(newpasspwrod))
+		{
+			alert("错误:新密码格式不符合要求! 要求至少含有一个字母");
+			return false;
+		}
+
+		var jgpattern3 = /^.*[0-9]+.*$/; //必须有一个数字
+		if (!jgpattern3.test(newpasspwrod))
+		{
+			alert("错误:新密码格式不符合要求! 要求至少含有一个数字");
+			return false;
+		}
+		
+        return true;
+    });
 });
 </script>
 {/literal}
@@ -97,7 +221,7 @@ $(function() {
   </div>
   <div class="login">
 	  <div class="loginboard">
-	  <form action="{$system_config.img_url}/access/login" method="POST">
+	  <form id="loginform" action="{$system_config.img_url}/access/login" method="POST">
 	        <input class="username" name="username" type="text" /><br/>
 	  	    <input class="userpwd" name="userpwd" type="password" /><br/>
 	  	    <input class="submit" type="submit" name="submit" value=" " />
@@ -116,6 +240,36 @@ $(function() {
       <br/><br/><br/><br/><span>@2011 www.ChannelSoft.com</span>
   </div>
 </div>
+
+<!-- 修改密码 -->
+<div id="lockscreem_window" closed="true" modal="true" title="修改密码" style="width:550px;height:300px;text-align :left;">
+	<form id="setpwd" action="{$system_config.img_url}/access/resetpassword" method="POST">
+		<table class="form-table">
+			<tr >
+				<th>原密码：</th>
+				<td><input type="password" name="oldpasspwrod" id="oldpasspwrod"></input></td>
+				<td style="width: 150px">原密码</td>
+			</tr>
+			<tr>
+				<th>新密码：</th>
+				<td><input type="password" name="newpasspwrod" id="newpasspwrod"></input></td>
+				<td id="newpasspwroddsc">密码要求由字母和数字组成，长度6位至8位</td>
+			</tr>
+			<tr>
+				<th>再次新密码：</th>
+				<td><input type="password" name="newpasspwrod2" id="newpasspwrod2"></input></td>
+				<td id="newpasspwroddsc2">请再输入一次新密码</td>
+			</tr>
+		</table>
+		<input type="hidden" id="userid" name="userid" value="{$user.uid}"/>
+		<input type="hidden" id="userid" name="workid" value="{$user.workid}"/>
+		<input style="margin-left:100px; margin-top:10px;" type="submit" name="submit" value="提交" />
+		<input style="margin-left:50px; margin-top:10px;" type="reset" name="reset" value="重填" />
+	</form>
+
+</div>
+<!-- 锁屏 end -->
+		
 
 </div><!--qn_all -->
 <div id="databuf"></div>

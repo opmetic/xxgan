@@ -135,9 +135,9 @@ class AccessController extends Zend_Controller_Action_Qn
 		setcookie('PHPSESSID', '', time() - 100); //cookie失效
 		
 		$currectHour = date('H', time());
-		if ((int)$currectHour > 23 )
+		if ((int)$currectHour > 12 )
 		{
-			$day_s = mktime(0,0,0,date("m", strtotime("-3 day")), date("d",strtotime("-3 day")), date("Y",strtotime("-3 day")));
+			$day_s = mktime(0, 0, 0, date("m", strtotime("-3 day")), date("d", strtotime("-3 day")), date("Y", strtotime("-3 day")));
 
 			$db->delete(TABLE_QNSOFT_SESSION, "time < " . $day_s);
     	}

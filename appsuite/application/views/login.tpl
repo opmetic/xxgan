@@ -94,7 +94,7 @@ $(function() {
 		shadow: false,
 		closed: true
 		});
-
+	$("#username").focus();
 	{/literal}{if $setpwd}
 	alert("{$setpwd}");
 	{literal}
@@ -107,6 +107,7 @@ $(function() {
 		shadow: false,
 		closed: false
 	});
+	$("#oldpasspwrod").focus();
 	{/literal}{/if}{literal}
 	
 
@@ -222,7 +223,7 @@ $(function() {
   <div class="login">
 	  <div class="loginboard">
 	  <form id="loginform" action="{$system_config.img_url}/access/login" method="POST">
-	        <input class="username" name="username" type="text" /><br/>
+	        <input class="username" id="username" name="username" type="text" /><br/>
 	  	    <input class="userpwd" name="userpwd" type="password" /><br/>
 	  	    <input class="submit" type="submit" name="submit" value=" " />
 	  	    <input class="reset" type="reset" name="submit" value=" "/>

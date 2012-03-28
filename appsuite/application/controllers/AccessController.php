@@ -106,8 +106,11 @@ class AccessController extends Zend_Controller_Action_Qn
                 $userData = $db->fetchRow($select);
             }
             
-            
-            if ($userData && $userData['uflag'] != 0)
+			if (!$userData)
+			{
+				$view->assign('alert', '用户不存在！');
+			}
+            else if ($userData && $userData['uflag'] != 0)
             {
                 $view->assign('alert', '坐席已被冻结，请与管理员联系！！'); 
             }
@@ -428,7 +431,10 @@ class AccessController extends Zend_Controller_Action_Qn
 	    	$userPwdInfo = $this->errorPwd($userPwdInfo); 
 	    	$view->assign('alert', '用户名或密码错误！！您还有 ' . ($config['pwd_checkerrortimes'] - $userPwdInfo['pm_errorpwdcount']) . ' 次机会!');
 	    	$view->assign('user', $userData); //用户信息
-            $view->assign('setpwd', 'setpwd'); //强制要求修改密码
+			if (($config['pwd_checkerrortimes'] - $userPwdInfo['pm_errorpwdcount']) > 0)
+			{
+            	$view->assign('setpwd', '用户名或密码错误！！您还有 ' . ($config['pwd_checkerrortimes'] - $userPwdInfo['pm_errorpwdcount']) . ' 次机会!'); //强制要求修改密码
+			}	
         	$view->display('login.tpl');
 	    	
 	    }

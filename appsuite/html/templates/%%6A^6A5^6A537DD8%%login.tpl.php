@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2012-03-26 00:49:40
+<?php /* Smarty version 2.6.20, created on 2012-03-28 10:15:20
          compiled from login.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -114,7 +114,7 @@ $(function() {
 		shadow: false,
 		closed: true
 		});
-
+	$("#username").focus();
 	'; ?>
 <?php if ($this->_tpl_vars['setpwd']): ?>
 	alert("<?php echo $this->_tpl_vars['setpwd']; ?>
@@ -129,6 +129,7 @@ $(function() {
 		shadow: false,
 		closed: false
 	});
+	$("#oldpasspwrod").focus();
 	'; ?>
 <?php endif; ?><?php echo '
 	
@@ -251,7 +252,7 @@ $(function() {
 	  <div class="loginboard">
 	  <form id="loginform" action="<?php echo $this->_tpl_vars['system_config']['img_url']; ?>
 /access/login" method="POST">
-	        <input class="username" name="username" type="text" /><br/>
+	        <input class="username" id="username" name="username" type="text" /><br/>
 	  	    <input class="userpwd" name="userpwd" type="password" /><br/>
 	  	    <input class="submit" type="submit" name="submit" value=" " />
 	  	    <input class="reset" type="reset" name="submit" value=" "/>
@@ -307,4 +308,4 @@ $(function() {
 </div><!--qn_all -->
 <div id="databuf"></div>
 </body>
-</html>
+</html>

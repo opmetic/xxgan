@@ -38,7 +38,7 @@ function editDle(title, id)
 
 function reSetPwd(id, nPage)
 {
-	var bln = window.confirm("确定要将应该用户的密码重置为 00000000 吗?");
+	var bln = window.confirm("确定要将应该用户的密码重置为 abc123 吗?");
 	if (bln)
 	{
 		location.href = "{/literal}{$system_config.img_url}{literal}/qnuserrenter/resetpwd/id/" + id + "/page/" + nPage;

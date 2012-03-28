@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.20, created on 2011-07-04 11:18:23
+<?php /* Smarty version 2.6.20, created on 2012-03-28 10:21:51
          compiled from renter/userlist.tpl */ ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -52,7 +52,7 @@ function editDle(title, id)
 
 function reSetPwd(id, nPage)
 {
-	var bln = window.confirm("确定要将应该用户的密码重置为 00000000 吗?");
+	var bln = window.confirm("确定要将应该用户的密码重置为 abc123 吗?");
 	if (bln)
 	{
 		location.href = "'; ?>
@@ -199,3 +199,4 @@ if ($this->_foreach['listloop']['total'] > 0):
 </body>
 
 </html>
+

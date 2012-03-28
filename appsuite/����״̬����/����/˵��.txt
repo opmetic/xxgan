@@ -1,0 +1,56 @@
+=======================================================================
+修改：
+1. 登陆过程中，增强对密码的验证
+2. 管理员的解冻操作增加 把密码置为初始状态，并设置密码为abc123
+3. 坐席修改密码时，增加密码格式验证
+
+
+=======================================================================
+上线说明：
+
+一、执行以下数据库脚本：
+
+--
+-- 表的结构 `qnsoft_pwdmanage`
+--
+
+DROP TABLE IF EXISTS `qnsoft_pwdmanage`;
+CREATE TABLE IF NOT EXISTS `qnsoft_pwdmanage` (
+  `pm_id` int(11) NOT NULL auto_increment,
+  `pm_workid` varchar(32) collate latin1_general_ci NOT NULL,
+  `pm_status` int(11) NOT NULL,
+  `pm_lastpwdtime` int(11) NOT NULL,
+  `pm_errorpwdtime` int(11) NOT NULL,
+  `pm_errorpwdcount` int(11) NOT NULL,
+  `pm_sessionid` varchar(128) collate latin1_general_ci NOT NULL,
+  `pm_enterprisecode` varchar(128) collate latin1_general_ci NOT NULL,
+  PRIMARY KEY  (`pm_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=7 ;
+
+-- 增加三个管理员数据
+INSERT INTO `qnsoft_pwdmanage` (`pm_id`, `pm_workid`, `pm_status`, `pm_lastpwdtime`, `pm_errorpwdtime`, `pm_errorpwdcount`, `pm_sessionid`, `pm_enterprisecode`) VALUES
+(9, 'admin', 2, 1332905627, 0, 0, '777c994d95df72e73aa188f2b0c7d260', ''),
+(7, 'gz', 2, 1332905627, 0, 0, '777c994d95df72e73aa188f2b0c7d260', ''),
+(8, 'sc', 2, 1332905627, 0, 0, '777c994d95df72e73aa188f2b0c7d260', '');
+
+
+-- 增加三个全局参数
+INSERT INTO `qnsoftb`.`qnsoft_setting` (`variable`, `value`, `type`) VALUES ('pwd_age', '1', '1');
+INSERT INTO `qnsoftb`.`qnsoft_setting` (`variable`, `value`, `type`) VALUES ('pwd_checkerrorperiod', '30', '1');
+INSERT INTO `qnsoftb`.`qnsoft_setting` (`variable`, `value`, `type`) VALUES ('pwd_checkerrortimes', '3', '1');
+
+
+
+
+
+二、替换以下文件
+\appsuite\application\controllers\AccessController.php
+\appsuite\application\controllers\QnuserrenterController.php
+
+\appsuite\application\models\Zend_Controller_Action_Qn.php
+
+\appsuite\application\views\login.tpl
+\appsuite\application\views\renter\userlist.tpl
+\appsuite\application\views\renter\setagent.tpl
+
+
